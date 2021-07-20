@@ -9,6 +9,8 @@
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles.css">
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
 </head>
 
 <body>
@@ -38,7 +40,7 @@
     <div class="mission-cont">
       <div class="counter-cont">
         <div class="counter-filter-layer">
-          <div class="counter">105</div>
+          <div class="counter" id="counter"></div>
           <div class="counter-subtext">Lives impacted</div>
         </div>
       </div>
@@ -56,6 +58,55 @@
   <div class="section-headings text-gradient">Be part of the PHOENIX Community!</div>
   <p class="sub-heading" style="max-width: 920px; margin: 24px auto;">I have helped multiple people in their academic, personal, and professional
   life. If you are one among them and want to be part of the phoenix community, drop a review below.</p>
+
+  <div class="container">
+    <div id="myform">
+      <div class="form-heading">
+        If you fill everything, it takes 3 minutes. If you fill only mandatory fields, it takes less than 1 minute.
+      </div>
+      <div class="required-contianer">
+        <div style="width: 100%; max-width: 350px;">
+          <div class="input-label">Name<sup>*</sup></div>
+          <input type="text" name="name" id="name-input" class="input-field" placeholder="Name" required>
+        </div>
+        <div style="width: 100%; max-width: 350px;">
+          <div class="input-label">Email<sup>*</sup></div>
+          <input type="email" name="Email" id="email-input" class="input-field" placeholder="Email" required>
+        </div>
+      </div>
+      <div>
+        <div class="input-label">Phone Number</div>
+        <input type="number" name="PhNumber" id="phone-input" class="input-field" placeholder="+910000000000">
+      </div>
+      <div style="margin: 32px 0;">
+        <div class="input-label">Describe, how did I impact your life?</div>
+        <input type="text" name="impact" id="impact-input" class="input-field" style="width: 100%; max-width: none;">
+      </div>
+      <div class="form-heading">
+        You decide if I should inform you about:
+      </div>
+      <label class="main">
+        My public events which you may be able to attend
+        <input type="checkbox" name='My public events which you may be able to attend' id="pub-events">
+        <span class="geekmark"></span>
+      </label>
+      <label class="main">
+        My articles or books.
+        <input type="checkbox" name='My articles or books' id="articles-and-books">
+        <span class="geekmark"></span>
+      </label>
+      <label class="main">
+        Opportunities the Phoenix community get to support a scholarship for a student who needs it, to pursue further education
+        <input type="checkbox" name='Opportunities the Phoenix community get to support a scholarship for a student who needs it, to pursue further education' id="support-a-scholarship">
+        <span class="geekmark"></span>
+      </label>
+      <div class="note">
+        Note: In each communication to you, there will be an option to unsubscribe if you don’t want to get future
+        notifications. My intention is not to spam you and I will be very thoughtful if I decide to contact you.
+      </div>
+      <button onclick="SubForm()" class="form-submit">Submit</button>
+    </div>
+  </div>
 
   <!-- ! footer -->
 

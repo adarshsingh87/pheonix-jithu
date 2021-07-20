@@ -659,3 +659,131 @@ footer {
 .mission-left {
 	max-width: 475px;
 }
+
+#myform {
+	width: 100%;
+	padding: 48px;
+	background: #0f0f0f;
+	border-radius: 4px;
+	margin: 48px auto;
+}
+
+@media screen and (max-width: 960px) {
+	#myform {
+		padding: 25px;
+	}
+}
+
+.form-heading {
+	font-size: 20px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+}
+
+.input-label {
+	font-size: 14px;
+	line-height: 32px;
+	color: #999999;
+}
+
+.input-label sup {
+	color: #999999;
+}
+
+.required-contianer {
+	margin: 32px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 820px;
+}
+
+.input-field {
+	color: white;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	padding: 2px;
+	max-width: 350px;
+	width: 100%;
+	border-bottom: 2px solid #1d1d1d;
+}
+
+.input-field:focus {
+	border-bottom-color: #f48429;
+}
+
+.main {
+	display: block;
+	position: relative;
+	padding-left: 45px;
+	margin: 20px 0;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 22px;
+	color: #999;
+}
+
+input[type='checkbox'] {
+	visibility: hidden;
+}
+
+.geekmark {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	border-radius: 4px;
+	border: 1px solid #f37a2d;
+}
+
+.main input:checked ~ .geekmark {
+	background: linear-gradient(91.65deg, #f15e3d -0.95%, #f59121 107.39%);
+}
+
+.geekmark:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+.main input:checked ~ .geekmark:after {
+	display: block;
+}
+
+.main .geekmark:after {
+	left: 4px;
+	bottom: 3px;
+	width: 4px;
+	height: 8px;
+	border: solid white;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.note {
+	font-size: 14px;
+	line-height: 22px;
+	/* or 157% */
+	color: #999999;
+	letter-spacing: 0.03em;
+	margin: 24px 0;
+}
+
+.form-submit {
+	cursor: pointer;
+	border: none;
+	background: linear-gradient(91.65deg, #f15e3d -0.95%, #f59121 107.39%);
+	border-radius: 4px;
+	padding: 16px 24px;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 18px;
+	margin-top: 24px;
+}
