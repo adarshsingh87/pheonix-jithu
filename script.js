@@ -76,3 +76,32 @@ $('.sec-carousel').owlCarousel({
 		},
 	},
 })
+
+function expandCard (i) {
+	const cardContainer = $('.help-main-container')
+	const card1 = $('.card1')
+	const card2 = $('.card2')
+	const card3 = $('.card3')
+	switch(i){
+		case 1:
+			cardContainer.addClass('expanded-card-cont')
+			card1.toggleClass('expanded-cards')
+			card2.removeClass('expanded-cards')
+			card3.removeClass('expanded-cards')
+			break
+		case 2:
+			cardContainer.addClass('expanded-card-cont')
+			card2.toggleClass( 'expanded-cards' )
+			card1.removeClass('expanded-cards')
+			card3.removeClass('expanded-cards')
+			break
+		case 3:
+			cardContainer.addClass('expanded-card-cont')
+			card3.toggleClass( 'expanded-cards' )
+			card2.removeClass('expanded-cards')
+			card1.removeClass('expanded-cards')
+			break
+		default:
+			break
+	}
+}
