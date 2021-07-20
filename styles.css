@@ -315,7 +315,7 @@ nav {
 .uk-card-primary {
 	border-radius: 8px;
 }
-.uk-card > :last-child {
+.uk-card:last-child {
 	margin-top: 0;
 	margin-bottom: 10px;
 }
@@ -334,13 +334,13 @@ nav {
 	padding-bottom: 20px;
 }
 
-.owl-dot > span {
+.owl-dot span {
 	width: 10px !important;
 	height: 10px !important;
 	background: #1a1a1a !important;
 }
 
-.owl-carousel > .active > span {
+.owl-carousel .active span {
 	width: 10px;
 	height: 10px;
 	background: linear-gradient(
