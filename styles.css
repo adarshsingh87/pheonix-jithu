@@ -592,8 +592,8 @@ footer {
 }
 
 .help-main-container2 {
-		display: none;
-	}
+	display: none;
+}
 
 @media screen and (max-width: 1200px) {
 	.help-main-container {
@@ -606,4 +606,56 @@ footer {
 		justify-content: center;
 		margin: 60px auto;
 	}
+}
+
+.mission-cont {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	margin: 100px auto;
+}
+
+@media screen and (max-width: 960px) {
+	.mission-cont {
+		display: block;
+	}
+}
+
+.counter-cont {
+	max-width: 512px;
+	max-height: 512px;
+	width: 100%;
+	height: 100%;
+	background-image: url(./assets/mission-bg.png);
+	background-size: 100% 100%;
+}
+
+.counter-filter-layer {
+	height: 100%;
+	width: 100%;
+	background: rgba(20, 9, 1, 0.6);
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.counter {
+	font-weight: 500;
+	font-size: 133px;
+	line-height: 171px;
+	text-align: center;
+	letter-spacing: 1.9px;
+}
+
+.counter-subtext {
+	font-size: 36.5556px;
+	line-height: 47px;
+	letter-spacing: 0.522222px;
+}
+
+.mission-left {
+	max-width: 475px;
 }
