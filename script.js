@@ -35,3 +35,23 @@ const navSlide = () => {
 }
 
 navSlide()
+
+// ! carousel
+$('.pri-carousel').owlCarousel({
+	margin: 30,
+	nav: true,
+	autoplay:true,
+  autoplayTimeout:4000,
+	loop: true,
+	responsive: {
+		0: {
+			items: 1,
+		},
+		640: {
+			items: 2,
+		},
+		960: {
+			items: 3,
+		},
+	},
+})
