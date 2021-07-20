@@ -39,7 +39,7 @@ navSlide()
 // ! carousel
 $('.pri-carousel').owlCarousel({
 	margin: 30,
-	nav: true,
+	nav: false,
 	autoplay:true,
   autoplayTimeout:4000,
 	loop: true,
@@ -52,6 +52,25 @@ $('.pri-carousel').owlCarousel({
 		},
 		960: {
 			items: 3,
+		},
+	},
+})
+
+$('.sec-carousel').owlCarousel({
+	margin: 30,
+	nav: false,
+	autoplay:true,
+  autoplayTimeout:4000,
+	loop: true,
+	responsive: {
+		0: {
+			items: 1,
+		},
+		640: {
+			items: 1,
+		},
+		960: {
+			items: 1,
 		},
 	},
 })

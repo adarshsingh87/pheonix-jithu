@@ -400,9 +400,43 @@ nav {
 
 .card-c2a {
 	display: flex;
-  align-items: center;
+	align-items: center;
 	font-family: 'Mulish';
 	font-weight: bold;
 	font-size: 14px;
 	line-height: 18px;
+}
+
+.testimonial {
+	background: #0f0f0f;
+	border-radius: 4px;
+	padding: 40px 24px;
+}
+
+.testimonial-heading {
+	display: flex;
+	align-items: center;
+	margin-bottom: 34px;
+}
+
+.testimonial-heading > img {
+	border-radius: 50%;
+	width: 40px !important;
+	height: 40px;
+	margin-right: 12px;
+}
+
+.testimonial-title {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 20px;
+	letter-spacing: 0.2px;
+}
+
+.testimonial-text {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 150%;
+	letter-spacing: 0.02em;
+  color: #999999;
 }
