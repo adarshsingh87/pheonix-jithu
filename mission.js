@@ -40,38 +40,24 @@ navSlide()
 
 $('.counter-cont').height($('.counter-cont').innerWidth())
 
-function SubForm () {
-	const formData = {
-"name": document.getElementById('name-input').value,
-"Email": document.getElementById('email-input').value,
-"PhNumber": document.getElementById('phone-input').value,
-"impact": document.getElementById('impact-input').value,
-"My public events which you may be able to attend": document.getElementById('pub-events').checked,
-"My articles or books": document.getElementById('articles-and-books').checked,
-"Opportunities the Phoenix community get to support a scholarship for a student who needs it, to pursue further education": document.getElementById('support-a-scholarship').checked
-}
+  // var firebaseConfig = {
+  //   apiKey: "AIzaSyCYYB2rA5SKxDrmnvmx5dSPHKxzv07AERw",
+	// 	authDomain: "realtime-view-counter-cb7a5.firebaseapp.com",
+	// 	databaseURL: "https://realtime-view-counter-cb7a5-default-rtdb.asia-southeast1.firebasedatabase.app/",
+  //   projectId: "realtime-view-counter-cb7a5",
+  //   storageBucket: "realtime-view-counter-cb7a5.appspot.com",
+  //   messagingSenderId: "861723606283",
+  //   appId: "1:861723606283:web:88afc27b0b5775781b760e"
+  // };
 
-    $.ajax({
-        url:'https://api.apispreadsheets.com/data/15691/',
-        type:'post',
-        data: formData,
-        success: function(){
-          alert('Success')
-        },
-        error: function(){
-          alert('Error occurred')
-        }
-		} );
-}
-
-  var firebaseConfig = {
-    apiKey: "AIzaSyCYYB2rA5SKxDrmnvmx5dSPHKxzv07AERw",
-		authDomain: "realtime-view-counter-cb7a5.firebaseapp.com",
-		databaseURL: "https://realtime-view-counter-cb7a5-default-rtdb.asia-southeast1.firebasedatabase.app/",
-    projectId: "realtime-view-counter-cb7a5",
-    storageBucket: "realtime-view-counter-cb7a5.appspot.com",
-    messagingSenderId: "861723606283",
-    appId: "1:861723606283:web:88afc27b0b5775781b760e"
+	var firebaseConfig = {
+    apiKey: "AIzaSyBijIp4DieeK6eSjZnZsHVckfJKUkcZoMA",
+		authDomain: "website-counter-79808.firebaseapp.com",
+		databaseURL: "https://website-counter-79808-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    projectId: "website-counter-79808",
+    storageBucket: "website-counter-79808.appspot.com",
+    messagingSenderId: "1002380118417",
+    appId: "1:1002380118417:web:646ef5f3edb4f2e3883230"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -102,12 +88,46 @@ function renderCounter() {
   $('#counter').html(counter);
 }
 
-$('.form-submit').on('click', function() {
-  counter++;
+// $('.form-submit').on('click', function() {
+//   counter++;
 
   
-  database.ref('counter').set({
-    clickCounter: counter
-  })
-  renderCounter();
-})
+//   database.ref('counter').set({
+//     clickCounter: counter
+//   })
+//   renderCounter();
+// })
+
+
+function SubForm () {
+	const formData = {
+		"name": document.getElementById( 'name-input' ).value,
+		"Email": document.getElementById( 'email-input' ).value,
+		"PhNumber": document.getElementById( 'phone-input' ).value,
+		"impact": document.getElementById( 'impact-input' ).value,
+		"My public events which you may be able to attend": document.getElementById( 'pub-events' ).checked,
+		"My articles or books": document.getElementById( 'articles-and-books' ).checked,
+		"Opportunities the Phoenix community get to support a scholarship for a student who needs it, to pursue further education": document.getElementById( 'support-a-scholarship' ).checked
+	}
+	
+	if ( formData.name === '' || formData.Email === '' ) {
+		alert('Please fill the Name and Email fields')
+	} else {
+			$.ajax({
+        url:'https://api.apispreadsheets.com/data/15704/',
+        type:'post',
+        data: formData,
+				success: function () {
+					counter++;
+          database.ref('counter').set({
+            clickCounter: counter
+          })
+          renderCounter();
+          alert('Success')
+        },
+        error: function(){
+          alert('Error occurred')
+        }
+		});
+	}
+}
