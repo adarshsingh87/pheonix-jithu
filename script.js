@@ -64,6 +64,7 @@ $('.sec-carousel').owlCarousel({
 	autoplay:true,
   autoplayTimeout:4000,
 	loop: true,
+	autoHeight:true,
 	responsive: {
 		0: {
 			items: 1,

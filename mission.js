@@ -40,15 +40,6 @@ navSlide()
 
 $('.counter-cont').height($('.counter-cont').innerWidth())
 
-  // var firebaseConfig = {
-  //   apiKey: "AIzaSyCYYB2rA5SKxDrmnvmx5dSPHKxzv07AERw",
-	// 	authDomain: "realtime-view-counter-cb7a5.firebaseapp.com",
-	// 	databaseURL: "https://realtime-view-counter-cb7a5-default-rtdb.asia-southeast1.firebasedatabase.app/",
-  //   projectId: "realtime-view-counter-cb7a5",
-  //   storageBucket: "realtime-view-counter-cb7a5.appspot.com",
-  //   messagingSenderId: "861723606283",
-  //   appId: "1:861723606283:web:88afc27b0b5775781b760e"
-  // };
 
 	var firebaseConfig = {
     apiKey: "AIzaSyBijIp4DieeK6eSjZnZsHVckfJKUkcZoMA",
