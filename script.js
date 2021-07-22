@@ -44,6 +44,7 @@ $('.pri-carousel').owlCarousel({
 	nav: false,
 	autoplay:true,
   autoplayTimeout:4000,
+	autoplayHoverPause:true,
 	loop: true,
 	responsive: {
 		0: {
@@ -62,7 +63,8 @@ $('.sec-carousel').owlCarousel({
 	margin: 30,
 	nav: false,
 	autoplay:true,
-  autoplayTimeout:4000,
+	autoplayTimeout: 4000,
+	autoplayHoverPause:true,
 	loop: true,
 	autoHeight:true,
 	responsive: {
