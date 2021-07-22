@@ -113,7 +113,8 @@ function SubForm () {
           database.ref('counter').set({
             clickCounter: counter
           })
-          renderCounter();
+					renderCounter();
+					document.getElementById('close').click()
           alert('Success')
         },
         error: function(){
