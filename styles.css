@@ -713,6 +713,7 @@ footer {
 
 .input-field:focus {
 	border-bottom-color: #f48429;
+	background-color: transparent;
 }
 
 .main {
