@@ -105,7 +105,7 @@ function SubForm () {
 		alert('Please fill the Name and Email fields')
 	} else {
 			$.ajax({
-        url:'https://api.apispreadsheets.com/data/15704/',
+        url:'https://sheetdb.io/api/v1/ljcjmmvki2tha',
         type:'post',
         data: formData,
 				success: function () {
