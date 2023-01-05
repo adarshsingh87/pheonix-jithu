@@ -1,4 +1,5 @@
 document.querySelector('#year').innerHTML = new Date().getFullYear();
+console.log("Made by Adarsh: http://adarshsingh87.github.io/")
 
 // navbar
 
